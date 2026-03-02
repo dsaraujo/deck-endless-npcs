@@ -91,7 +91,7 @@ class EndlessNPCGenerator {
         }
 
         const isApplySecret = (rule, hts, scs) => {
-            if (!rule) return true;
+            if (!rule) return false;
             if (rule.H) {
                 const hRule = rule.H;
                 if (hRule.endsWith("+")) {
@@ -112,7 +112,7 @@ class EndlessNPCGenerator {
                     return false;
                 }
             }
-            return true;
+            return false;
         };
 
         let sSecret = "";
