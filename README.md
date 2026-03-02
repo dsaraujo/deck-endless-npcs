@@ -1,6 +1,6 @@
 # Deck of Endless NPCs
 
-A Foundry VTT module that generates random NPCs based on the rules of the *Pathfinder Deck of Endless NPCs*. 
+A Foundry VTT module that generates random NPCs based on the rules of the *[Pathfinder Deck of Endless NPCs](https://store.paizo.com/pathfinder-deck-of-endless-npcs/?searchid=322877)*. 
 
 This module provides a simple interface within Foundry to quickly generate NPCs with details such as traits, alignment, ancestry, class, roleplay hooks, secrets, and more.
 
