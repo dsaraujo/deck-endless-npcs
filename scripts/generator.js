@@ -95,21 +95,21 @@ class EndlessNPCGenerator {
             if (rule.H) {
                 const hRule = rule.H;
                 if (hRule.endsWith("+")) {
-                    if (parseInt(hRule.charAt(0)) > hts) return false;
+                    if (parseInt(hRule.charAt(0)) >= hts) return true;
                 } else if (hRule.endsWith("-")) {
-                    if (parseInt(hRule.charAt(0)) < hts) return false;
-                } else if (parseInt(hRule) !== hts) {
-                    return false;
+                    if (parseInt(hRule.charAt(0)) <= hts) return true;
+                } else if (parseInt(hRule) === hts) {
+                    return true;
                 }
             }
             if (rule.S) {
                 const sRule = rule.S;
                 if (sRule.endsWith("+")) {
-                    if (parseInt(sRule.charAt(0)) > scs) return false;
+                    if (parseInt(sRule.charAt(0)) >= scs) return true;
                 } else if (sRule.endsWith("-")) {
-                    if (parseInt(sRule.charAt(0)) < scs) return false;
-                } else if (parseInt(sRule) !== scs) {
-                    return false;
+                    if (parseInt(sRule.charAt(0)) <= scs) return true;
+                } else if (parseInt(sRule) === scs) {
+                    return true;
                 }
             }
             return false;
