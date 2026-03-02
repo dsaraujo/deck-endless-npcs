@@ -1,0 +1,46 @@
+<div class="endless-npc-container">
+    {{#if npc}}
+    <div class="endless-npc-header">
+        <h2>{{npc.name}}</h2>
+        <p>{{npc.alignment}} | {{npc.ancestry}} {{#if npc.descriptor}}({{npc.ethHeri}}){{/if}}</p>
+        <p style="font-size: 0.9em; color: #666;">{{npc.presence}} | {{npc.group}}</p>
+    </div>
+
+    <div class="endless-npc-details">
+        {{#if npc.trait}}
+        <p><strong>{{npc.trait.NAME}} </strong><br />{{npc.trait.TEXT}}</p>
+        <hr />
+        {{/if}}
+
+        {{#if npc.table1}}
+        <p><strong>{{npc.table1.NAME}}</strong><br />
+            {{npc.table1.TEXT}} <strong>{{npc.table1.detailName}}:</strong> {{npc.table1.detailValue}}</p>
+        <hr />
+        {{/if}}
+
+        {{#if npc.table2}}
+        <p><strong>{{npc.table2.NAME}}</strong><br />
+            {{npc.table2.TEXT}} <strong>{{npc.table2.detailName}}:</strong> {{npc.table2.detailValue}}</p>
+        {{#if npc.secret}}
+        <hr />{{/if}}
+        {{/if}}
+
+        {{#if npc.secret}}
+        <p><strong>SECRET</strong><br />{{npc.secret}}</p>
+        {{/if}}
+    </div>
+    {{else}}
+    <p style="text-align: center; padding: 20px;">Click "Generate New" to create a new random NPC.</p>
+    {{/if}}
+
+    <div class="endless-npc-buttons">
+        <button type="button" class="generate-btn" data-action="generate">
+            <i class="fas fa-dice"></i> Generate New
+        </button>
+        {{#if npc}}
+        <button type="button" class="copy-btn" data-action="copy">
+            <i class="fas fa-copy"></i> Copy to Clipboard
+        </button>
+        {{/if}}
+    </div>
+</div>
