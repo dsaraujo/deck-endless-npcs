@@ -12,6 +12,8 @@ This module provides a simple interface within Foundry to quickly generate NPCs 
 
 ## Installation
 
+Manifest Link: https://github.com/dsaraujo/deck-endless-npcs/raw/main/module.json
+
 ### Manual Installation
 
 1. Copy the `deck-endless-npcs` folder into your Foundry VTT `Data/modules/` directory.
